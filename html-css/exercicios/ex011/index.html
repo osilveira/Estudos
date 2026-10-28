@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas</title>
+</head>
+<body>
+    <h1>Imagens que se adaptam sozinhas</h1>
+    <p>Neste exercício, baixei três imagens de tamanhos diferentes e as separei em três categorias: pequena, média e grande. O objetivo deste HTML é fazer com que a imagem exibida mude de acordo com o tamanho da tela do dispositivo. A imagem pequena será utilizada em celulares, a média em tablets e a grande em notebooks e televisores.
+<br>
+    Dito isso, experimente abrir esta página em diferentes dispositivos ou redimensionar a janela do navegador para testar como funciona a exibição dinâmica das imagens!</p>
+<p>
+    Para criar imagens dinâmicas no HTML, utilizamos a tag picture, que permite exibir imagens diferentes de acordo com as condições definidas. Dentro dela, colocamos a tag img, que será responsável por exibir a imagem principal. Neste exemplo, utilizaremos a imagem maior, chamada `foto-g.png`, que possui 1000 pixels. Acima da tag img, adicionaremos a tag source:media:type, utilizando os atributos media e srcset para definir as condições em que cada imagem deverá ser exibida. Dessa forma, o navegador poderá selecionar a imagem mais adequada de acordo com o tamanho da tela.
+</p>
+    <p>
+        Primeiramente, faremos uma pequena alteração no atributo media. Por uma escolha pessoal, comecei trabalhando com a imagem maior. Como estamos configurando a imagem grande, utilizaremos max-width para definir a largura máxima em que essa condição será aplicada. Assim, ao atingir essa largura ou um valor inferior, o navegador poderá selecionar outra imagem, caso exista uma condição correspondente.
+    <br>
+        Como dito anteriormente, a imagem <strong>foto-g.png</strong> possui <strong>1000 pixels</strong> de largura. Porém, queremos evitar que ela ocupe mais espaço do que o disponível na tela e provoque uma rolagem horizontal, faremos uma pequena alteração no atributo media. Por uma escolha pessoal, comecei trabalhando com a imagem maior, mas é comum organizar as condições das imagens responsivas começando pela menor. 
+    <br>  
+        Como estamos configurando a imagem grande, mudaremos o media="(<del>min</del>-width: )" para media="(<ins>max</ins>-width: )" assim definiremos a largura máxima em que essa condição será aplicada. Ao atingir essa largura ou um valor inferior, o navegador poderá selecionar outra imagem, caso exista uma condição correspondente.
+    </p>
+
+        <p>
+            Como dito anteriormente, a imagem <strong>foto-g.png</strong> possui <strong>1000 pixels</strong> de largura. Porém, queremos evitar que ela ocupe mais espaço do que o disponível na tela. Por isso, definiremos o limite de troca em 1050 px, acrescentando 50 px.
+            <br><br>
+            Nossa condição ficará assim: media="(max-width: 1050px)".
+        </p>
+
+        <p>Por fim, dentro do srcset colocaremos a imagem que substituirá a foto-g.</p>
+    
+<picture>
+    <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+    <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+    <img src="imagens/foto-g.png" alt="Imagem flexível">
+</picture>
+
+</body>
+</html>
