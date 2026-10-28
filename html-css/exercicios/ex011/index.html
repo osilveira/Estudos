@@ -34,6 +34,13 @@
     <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
     <img src="imagens/foto-g.png" alt="Imagem flexível">
 </picture>
-
+<hr>
+    <h1>Colocando Áudios</h1>
+    <p>Para reproduzir áudios no seu site, existem duas maneiras. A primeira e mais simples é utilizar a tag "audio". Para exibir os controles de reprodução, como os botões de play e pausa, utilizamos o atributo "controls". Também podemos adicionar o atributo "autoplay", que tenta reproduzir o áudio automaticamente assim que possível, sem que o usuário precise iniciar a reprodução manualmente.</p>
+        <audio src="audios/highbeams-bosley.mp3" controls></audio>
+    <p>A outra maneira é utilizar a tag audio e, dentro dela, adicionar a tag source:src. No atributo src, colocamos o caminho do arquivo de áudio, enquanto no atributo type informamos o formato do arquivo, como audio/mpeg para arquivos MP3. </p>
+    <audio controls>
+        <source src="audios/pulledtogetherpulledapart-davidsimon-bakerrobertpowell.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>
