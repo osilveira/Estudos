@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos</title>
+</head>
+<body>
+    <h1>Inserindo Vídeos Hospedados Localmente</h1>
+    <p>Para adicionar um vídeo ao seu site, basta utilizar a tag video e colocar o endereço do arquivo de vídeo no atributo src. Em seguida, podemos definir a largura do vídeo utilizando o atributo width. Neste exemplo, optei por utilizar 500 pixels de largura. 
+        <br> <br>
+    Por fim, adicionamos o atributo controls dentro da tag video, permitindo que o usuário tenha acesso aos controles de reprodução, como o botão de play e pausa.</p>
+    <p>Caso queira, também é possível adicionar o atributo poster que serve para definir uma capa para o vídeo.</p>
+    <video src="midia/video.mp4" width="500" controls poster="imagem/thumbnail.jfif"></video>
+    <p>Primeiramente, é importante entender que existem diferentes formatos de vídeo, como MP4, WebM e Ogg. Cada navegador possui compatibilidade com determinados formatos e codecs, ou seja, um vídeo que funciona em um navegador pode não funcionar em outro.
+        <br><br>
+        Por esse motivo, é recomendado disponibilizar o vídeo em diferentes formatos, permitindo que o navegador escolha automaticamente uma das versões compatíveis com ele. Assim, aumentamos as chances de o vídeo funcionar corretamente para todos os usuários.
+    </p>
+    <p>Para disponibilizar vídeos em diferentes formatos, criaremos novamente a tag video, mas deixaremos nela apenas os atributos width e controls. Dentro das tags video e /video, adicionaremos uma tag source para cada versão do vídeo.</p>
+    <p>No atributo src, colocaremos o caminho do arquivo, enquanto no atributo type informaremos seu formato:</p>
+    <ul>
+        <li>MP4 e M4V: video/mp4</li>
+        <li>WebM: video/webm</li>
+        <li>OGV: video/ogg</li>
+    </ul>
+    <p>Por fim, adicionaremos um parágrafo com uma mensagem para o usuário caso o navegador não consiga reproduzir nenhum dos formatos disponibilizados.</p>
+
+    <video width="500" controls poster="imagem/thumbnail.jfif">
+        <source src="midia/video.mp4" type="video/mp4">
+        <source src="midia/video.webm" type="video/webm">
+        <source src="midia/video.ogv" type="video/ogg">
+        <p>Seu navegador é paia</p>
+    </video>
+</body>
+</html>
