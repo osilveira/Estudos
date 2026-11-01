@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Interno</title>
+    <style>
+        body {
+            background-color: bisque;
+             font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 20px;
+        }
+        h1 {
+            color: rgb(3, 48, 33);
+            background-color: aliceblue;
+        }
+        h2 {
+            color: rgb(2, 29, 53);
+        }
+        p {
+          color: rgb(35, 34, 34); 
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS - Estilos Internos</h1>
+    <p>Para criar um estilo interno no código, basta adicionar a tag style dentro da tag head. Por uma questão de organização, costumo colocá-la logo abaixo da tag title. <br> <br>
+
+    Entre style e /style, você pode definir os estilos das tags e elementos que deseja modificar. Vamos supor que você queira alterar a cor de fundo da página. Para isso, será necessário selecionar a tag body. Dentro da tag style, você digitaria body {}, colocando as configurações desejadas entre as chaves. <br><br>
+    
+    Esse mesmo princípio vale para outras tags: basta escrever o nome da tag, abrir e fechar as chaves e adicionar as propriedades CSS que deseja modificar. <br><br>
+
+    Por exemplo: <br><br>  
+    <code> 
+        body { <br>
+            background-color: bisque; <br>
+        }
+    </code></p>
+
+    <h2>Principais Diferenças</h2>
+    <p>A principal diferença entre o CSS interno e o inline é que o inline obriga você a editar individualmente cada elemento que deseja modificar. <br><br>
+        
+    Por exemplo, imagine que você queira mudar a fonte de todos os seus parágrafos. Utilizando o CSS inline, seria necessário adicionar as configurações em cada tag p. Mas e se o seu código tiver 50 parágrafos? Exatamente! Você teria que repetir o mesmo código 50 vezes. <br><br>
+            
+    Já utilizando o CSS interno, você consegue modificar todos os parágrafos de uma só vez, sem precisar repetir as configurações. <br><br>
+    
+    Voltando ao exemplo dos parágrafos, caso queira alterar a fonte de todos eles para Arial e deixar o texto justificado, basta escrever: <br><br>
+        <code>
+            p { <br>
+                font-family: Arial, Helvetica, sans-serif;<br>
+                text-align: justify;<br>
+            }
+        </code>
+    </p>
+    <p>Claro, você também pode definir a família e o tamanho da fonte diretamente na tag `body`. Dessa forma, essas configurações serão herdadas pelos elementos de texto dentro dela, incluindo os parágrafos e os títulos, desde que não tenham estilos próprios sobrescrevendo essas propriedades.</p>
+    <hr>
+
+    <h1>Capítulo 1</h1>
+
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore id, itaque placeat cumque accusantium incidunt dolor ipsum rem beatae quibusdam corrupti quam dignissimos totam, suscipit debitis non dolorem quasi. Reprehenderit.</p>
+
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laboriosam est ducimus vitae omnis, labore placeat laborum quae accusantium! Dignissimos pariatur iste, eos praesentium eius quod cumque ducimus ipsa molestias!</p>
+
+    <h1>Capítulo 2</h1>
+
+    <h2>Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa at impedit vel voluptate maxime veniam magni pariatur expedita nulla, quam, aut quas architecto optio corrupti sed dolore quisquam suscipit. Saepe.</p>
+</body>
+</html>
